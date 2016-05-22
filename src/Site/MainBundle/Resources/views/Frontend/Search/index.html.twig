@@ -3,19 +3,19 @@
 {% from 'SiteMainBundle:Frontend/News:macros.html.twig' import listTab %}
 {% from 'SiteMainBundle:Frontend/Player:macros.html.twig' import listPlayers %}
 
-{% block title %}Результаты поиска{% endblock %}
+{% block title %}Search results{% endblock %}
 
 {% block content %}
     <div class="wrap_content">
         <div class="content">
             <h1>
-                Новости - {{ news|length }}
+                News - {{ news|length }}
             </h1>
             <div class="news_list announce_list">
                 {{ listTab(news) }}
             </div>
             <h1>
-                Игроки - {{ players|length }}
+                Players - {{ players|length }}
             </h1>
             {{ listPlayers(players) }}
         </div>

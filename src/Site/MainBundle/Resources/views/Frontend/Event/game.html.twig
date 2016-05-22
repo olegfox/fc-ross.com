@@ -9,12 +9,12 @@
         <div class="content content-top content-top-event">
             <div class="event-table game-table">
                 <ul class="menu">
-                    <li {% if app.request.get('subtype') == 'turnirnaia-tablitsa' %}class="current"{% endif %}>
-                        {% if app.request.get('subtype') != 'turnirnaia-tablitsa' %}
-                        <a href="{{ path('frontend_event_sub_index', {type: app.request.get('type'), subtype: 'turnirnaia-tablitsa'}) }}">
+                    <li {% if app.request.get('subtype') == 'russian-championship' %}class="current"{% endif %}>
+                        {% if app.request.get('subtype') != 'russian-championship' %}
+                        <a href="{{ path('frontend_event_sub_index', {type: app.request.get('type'), subtype: 'russian-championship'}) }}">
                             {% endif %}
                             Standings
-                            {% if app.request.get('subtype') != 'turnirnaia-tablitsa' %}
+                            {% if app.request.get('subtype') != 'russian-championship' %}
                         </a>
                         {% endif %}
                     </li>

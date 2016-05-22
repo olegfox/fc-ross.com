@@ -23,39 +23,39 @@ class EventController extends Controller
         if($subtype){
             switch($subtype){
 //              Страничка с новостями событий
-                case 'novosti': {
+                case 'news': {
                     $repository_news = $this->getDoctrine()->getRepository('SiteMainBundle:News');
                     $news = $repository_news->findByEventType($type);
                     $params = array_merge($params, array(
-                        'metaTitle' => 'Новости',
+                        'metaTitle' => 'News',
                         'news' => $news
                     ));
                 }break;
 //              Страничка с календарем игр для событий
-                case 'kaliendar-ighr': {
+                case 'fixtures': {
                     $repository_event = $this->getDoctrine()->getRepository('SiteMainBundle:Event');
                     $events = $repository_event->findByType($type);
                     $params = array_merge($params, array(
-                        'metaTitle' => 'Календарь игр',
+                        'metaTitle' => 'Fixtures',
                         'events' => $events
                     ));
                 }break;
 //              Страничка с результатом матчей для событий
-                case 'riezul-taty-matchiei': {
+                case 'results': {
                     $repository_event = $this->getDoctrine()->getRepository('SiteMainBundle:Event');
                     $resultEvents = $repository_event->findByTypeResult($type);
                     $params = array_merge($params, array(
-                        'metaTitle' => 'Результаты матчей',
+                        'metaTitle' => 'Results',
                         'resultEvents' => $resultEvents
                     ));
                 }break;
 //              Страничка с турнирной таблицей для событий
-                case 'turnirnaia-tablitsa': {
-                    if($type == 'kubok'){
+                case 'standings': {
+                    if($type == 'russian-cup'){
                         $repository_event = $this->getDoctrine()->getRepository('SiteMainBundle:Event');
                         $cuboc = $repository_event->getCuboc();
                         $params = array_merge($params, array(
-                            'metaTitle' => 'Турнирная таблица',
+                            'metaTitle' => 'Standings',
                             'cub' => $cuboc
                         ));
                     }else{
@@ -63,7 +63,7 @@ class EventController extends Controller
                         $teams = $repository_team->findByEventType($type);
 
                         $params = array_merge($params, array(
-                            'metaTitle' => 'Турнирная таблица',
+                            'metaTitle' => 'Standings',
                             'teams' => $teams
                         ));
                     }

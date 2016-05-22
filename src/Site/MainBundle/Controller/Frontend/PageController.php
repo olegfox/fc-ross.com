@@ -21,10 +21,10 @@ class PageController extends Controller
             'page' => $page
         );
 
-        if($slug == 'osnovnoi-sostav' || $slug == 'dubliruiushchii-sostav'){
+        if($slug == 'first-team' || $slug == 'dubliruiushchii-sostav'){
             $repository_player = $this->getDoctrine()->getRepository('SiteMainBundle:Player');
 
-            if($slug == 'osnovnoi-sostav'){
+            if($slug == 'first-team'){
                 $players = $repository_player->findOneByTeamWithStatus('Россиянка', Player::STATUS_MAIN);
             }else{
                 $players = $repository_player->findOneByTeamWithStatus('Россиянка', Player::STATUS_DOP);
@@ -34,7 +34,7 @@ class PageController extends Controller
                 'players' => $players
             ));
 
-        }elseif($slug == "rukovodstvo"){
+        }elseif($slug == "management-team"){
             $repository_director = $this->getDoctrine()->getRepository('SiteMainBundle:Director');
 
             $directors = $repository_director->findAllArray();

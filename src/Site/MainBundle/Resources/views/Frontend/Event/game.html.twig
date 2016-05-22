@@ -22,7 +22,7 @@
                         {% if app.request.get('subtype') != 'fixtures' %}
                         <a href="{{ path('frontend_event_sub_index', {type: app.request.get('type'), subtype: 'fixtures'}) }}">
                             {% endif %}
-                            Games calendar
+                            Fixtures
                             {% if app.request.get('subtype') != 'fixtures' %}
                         </a>
                         {% endif %}
@@ -31,7 +31,7 @@
                         {% if app.request.get('subtype') != 'results' %}
                         <a href="{{ path('frontend_event_sub_index', {type: app.request.get('type'), subtype: 'results'}) }}">
                             {% endif %}
-                            Match results
+                            Results
                             {% if app.request.get('subtype') != 'results' %}
                         </a>
                         {% endif %}

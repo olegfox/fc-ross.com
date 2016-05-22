@@ -8,7 +8,7 @@ frontend_partners:
 
 frontend_news:
     resource: "@SiteMainBundle/Resources/config/routing/frontend/news.yml"
-    prefix: /novosti
+    prefix: /news
 
 frontend_announcement:
     resource: "@SiteMainBundle/Resources/config/routing/frontend/announcement.yml"

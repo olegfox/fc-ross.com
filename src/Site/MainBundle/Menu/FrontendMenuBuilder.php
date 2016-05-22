@@ -57,7 +57,7 @@ class FrontendMenuBuilder extends ContainerAware
                     'routeParameters' => array('type' => 'opinion')
                 ));
 //          Меню турниров
-            } elseif ($m->getSlug() == 'turniry') {
+            } elseif ($m->getSlug() == 'competitions') {
 
 //              Если это турниры, то сразу попадаем на чемпионаты
                 $eventMenu = $menu->addChild($m->getTitle(), array(

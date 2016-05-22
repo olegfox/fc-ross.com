@@ -16,7 +16,7 @@ frontend_announcement:
 
 frontend_event:
     resource: "@SiteMainBundle/Resources/config/routing/frontend/event.yml"
-    prefix: /standings
+    prefix: /competitions
 
 frontend_media:
     resource: "@SiteMainBundle/Resources/config/routing/frontend/media.yml"

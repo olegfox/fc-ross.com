@@ -10,4 +10,4 @@ frontend_event_sub_index:
     path:     /{type}/{subtype}
     defaults: { _controller: "SiteMainBundle:Frontend/Event:index" }
     requirements:
-        subtype: novosti|kaliendar-ighr|riezul-taty-matchiei|russian-championship
+        subtype: news|fixtures|results|standings

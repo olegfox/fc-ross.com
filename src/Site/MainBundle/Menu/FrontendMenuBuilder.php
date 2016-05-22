@@ -68,14 +68,16 @@ class FrontendMenuBuilder extends ContainerAware
 
 //              Подменю турниров
                 foreach ($m->getChildren() as $c) {
-                    $subEventMenu = $eventMenu->addChild($c->getTitle(), array(
-                        'route' => 'frontend_event_sub_index',
-                        'routeParameters' => array('type' => $c->getSlug(), 'subtype' => 'turnirnaia-tablitsa')
-                    ));
-                    if(($routeName == 'frontend_event_sub_index' && $request->get('type') == $c->getSlug()) ||
-                       ($routeName == 'frontend_event_game_index' && $request->get('type') == $c->getSlug())){
-                        $subEventMenu->setCurrent(true);
-                    }
+                    if (!$c->getHide()) {
+                        $subEventMenu = $eventMenu->addChild($c->getTitle(), array(
+                            'route' => 'frontend_event_sub_index',
+                            'routeParameters' => array('type' => $c->getSlug(), 'subtype' => 'turnirnaia-tablitsa')
+                        ));
+                        if(($routeName == 'frontend_event_sub_index' && $request->get('type') == $c->getSlug()) ||
+                           ($routeName == 'frontend_event_game_index' && $request->get('type') == $c->getSlug())){
+                            $subEventMenu->setCurrent(true);
+                        }
+                    }    
                 }
 
 //          Меню текстовых страниц
@@ -102,10 +104,12 @@ class FrontendMenuBuilder extends ContainerAware
 
 //              Подменю
                 foreach ($m->getChildren() as $c) {
-                    $mainMenu->addChild($c->getTitle(), array(
-                        'route' => 'frontend_page_child',
-                        'routeParameters' => array('parent' => $c->getParent()->getSlug(), 'slug' => $c->getSlug())
-                    ));
+                    if (!$c->getHide()) {
+                        $mainMenu->addChild($c->getTitle(), array(
+                            'route' => 'frontend_page_child',
+                            'routeParameters' => array('parent' => $c->getParent()->getSlug(), 'slug' => $c->getSlug())
+                        ));
+                    }
                 }
 
             }

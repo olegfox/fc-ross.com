@@ -57,6 +57,7 @@
                             </div>
                         </div>
                     {% endif %}
+                    {#
                     {% if lastPastEvent[0].id is defined %}
                         <div class="the-end">
                             <a href="{{ path('frontend_event_game_index', {type: lastPastEvent[0].slug, id: lastPastEvent[0].id}) }}"></a>
@@ -81,6 +82,7 @@
                             </div>
                         </div>
                     {% endif %}
+                    #}
                 </div>
             </div>
             <div id="myController" class="date">
@@ -105,9 +107,9 @@
             {{ listLast(newsSlider) }}
             <div id="tabs" class="main-tab">
                 <ul>
-                    <li><a href="#tabs-1">события</a></li>
-                    <li><a href="#tabs-2">интервью</a></li>
-                    <li><a href="#tabs-3">мнения</a></li>
+                    <li><a href="#tabs-1">developments</a></li>
+                    <li><a href="#tabs-2">interview</a></li>
+                    <li><a href="#tabs-3">opinions</a></li>
                 </ul>
                 {% for n in news %}
                     <div id="tabs-{{ loop.index }}">
@@ -118,7 +120,7 @@
         </div>
     <div class="content-right-block">
         <div class="right-block kybki">
-            <div class="right-block-title">награды и кубки</div>
+            <div class="right-block-title">awards and trophies</div>
             <div class="kybki">
                 {% for c in cuboc %}<div class="kubok">
                     <img src="{{ asset(c.webPath) }}" alt="{{ asset(c.webPath) }}">
@@ -136,7 +138,7 @@
         </div>
         <div class="right-block">
             {{ calendarCircle(calendarEvent) }}
-            <a href="{{ path('frontend_event_sub_index', {type: 'chiempionat', subtype: 'kaliendar-ighr'}) }}" class="full-view">Полный календарь игр</a>
+            <a href="{{ path('frontend_event_sub_index', {type: 'chiempionat', subtype: 'kaliendar-ighr'}) }}" class="full-view">Full schedule</a>
         </div>
         {#<div class="right-block">#}
             {#<div id="tabs2" class="main-tab main-tab2">#}
@@ -189,17 +191,17 @@
         <div class="right-block">
             <div id="tabs3" class="main-tab main-tab2">
                 <ul>
-                    <li><a href="#tabs2">основной состав</a></li>
-                    <li><a href="#tabs3">дублирующий состав</a></li>
+                    <li><a href="#tabs2">main cast</a></li>
+                    <li><a href="#tabs3">duplicating structure</a></li>
                 </ul>
                 <div id="tabs2">
                     <div class="chempionat">
                         {% if teamsChiemp|length > 0 %}
                             <div class="chempionat-tr">
-                                <div class="chempionat-td chempionat-td-1">М</div>
-                                <div class="chempionat-td chempionat-td-2">Команда</div>
-                                <div class="chempionat-td chempionat-td-3">И</div>
-                                <div class="chempionat-td chempionat-td-4">О</div>
+                                <div class="chempionat-td chempionat-td-1">B</div>
+                                <div class="chempionat-td chempionat-td-2">Command</div>
+                                <div class="chempionat-td chempionat-td-3">P</div>
+                                <div class="chempionat-td chempionat-td-4">S</div>
                             </div>
                             {% for team in teamsChiemp %}
                                 <div class="chempionat-tr">
@@ -217,10 +219,10 @@
                     <div class="chempionat">
                         {% if teamsMolodioz|length > 0 %}
                             <div class="chempionat-tr">
-                                <div class="chempionat-td chempionat-td-1">М</div>
-                                <div class="chempionat-td chempionat-td-2">Команда</div>
-                                <div class="chempionat-td chempionat-td-3">И</div>
-                                <div class="chempionat-td chempionat-td-4">О</div>
+                                <div class="chempionat-td chempionat-td-1">B</div>
+                                <div class="chempionat-td chempionat-td-2">Command</div>
+                                <div class="chempionat-td chempionat-td-3">P</div>
+                                <div class="chempionat-td chempionat-td-4">S</div>
                             </div>
                             {% for team in teamsMolodioz %}
                                 <div class="chempionat-tr">

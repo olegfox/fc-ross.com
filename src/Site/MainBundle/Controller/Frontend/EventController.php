@@ -61,6 +61,7 @@ class EventController extends Controller
                     }else{
                         $repository_team = $this->getDoctrine()->getRepository('SiteMainBundle:Team');
                         $teams = $repository_team->findByEventType($type);
+
                         $params = array_merge($params, array(
                             'metaTitle' => 'Турнирная таблица',
                             'teams' => $teams

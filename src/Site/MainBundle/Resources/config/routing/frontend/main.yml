@@ -38,10 +38,10 @@ SitePollBundle_frontend:
     resource: "@SitePollBundle/Resources/config/routing/frontend.yml"
     prefix: /poll
 
-frontend_pages:
-    resource: "@SiteMainBundle/Resources/config/routing/frontend/page.yml"
-
 frontend_search_index:
     path:     /search
     defaults: { _controller: "SiteMainBundle:Frontend/Search:index" }
+
+frontend_pages:
+    resource: "@SiteMainBundle/Resources/config/routing/frontend/page.yml"
 

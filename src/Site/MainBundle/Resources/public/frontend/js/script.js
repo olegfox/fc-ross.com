@@ -6,6 +6,11 @@ $(function(){
         $('.wrap_content').css({
             'padding-bottom' : ($('.partners-block').height() + $('.footer').height() + 4) + 'px'
         });
+        if($('.main-moment').length > 0){
+            $('.main-moment').css({
+                'padding-bottom' : ($('.partners-block').height() + $('.footer').height() + 4) + 'px'
+            });
+        }  
     }
 
 //  Слайдер новостей

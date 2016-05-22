@@ -388,21 +388,43 @@ backend:
 
 frontend:
     event:
-      tour: Тур
-      goals: Голы
-      punishments: Наказания
-      replacements: Замены
-      player_team: Составы команд
-      bench_player_team: Запасные
-      bench_coach: Тренеры
-      full_view: Полная таблица
+      tour: Tour
+      goals: Goals
+      punishments: Punishment
+      replacements: Replacement
+      player_team: The teams
+      bench_player_team: Spare
+      bench_coach: Trainers
+      full_view: Full table
     partners:
-        title: Партнеры
+        title: Partners
     news:
-        title: Новости
+        title: News
         type:
-            events: События
-            interviews: Интервью
-            opinion: Мнения
+            events: Developments
+            interviews: Interview
+            opinion: Opinions
     announcement:
-        title: Анонсы
+        title: Announcements
+    player:
+        firstname: Name
+        secondname: Surname
+        patronymic: Patronymic
+        birthday: Birthday
+        birth_place: Place of Birth
+        nationality: Nationality
+        amplua: Line
+        height: Height
+        weight: Weight
+        firstCoach: First coach
+        progress: Progress
+        title: Title
+        previous_teams: Previous team
+        favorite_place: Favorite place
+        favorite_dish: Favorite dish
+        favorite_music: Favorite music
+        favorite_book: Favorite book
+        any_sport: If not for football, then what?
+        hobby: What to do in your spare time
+        favorite_phrase: Favorite phrase
+        status: Status

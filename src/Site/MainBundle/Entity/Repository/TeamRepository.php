@@ -35,7 +35,7 @@ class TeamRepository extends EntityRepository
                     SELECT t FROM Site\MainBundle\Entity\Team t
                     LEFT JOIN t.eventTeam et
                     LEFT JOIN et.event e
-                    WHERE e.name = :typeNumber and e.datetime > :now
+                    WHERE e.name = :typeNumber and (e.datetime >= :now or e.datetime <= :now)
                     ORDER BY t.position ASC
                 ';
             }break;
@@ -51,7 +51,7 @@ class TeamRepository extends EntityRepository
                     SELECT t FROM Site\MainBundle\Entity\Team t
                     LEFT JOIN t.eventTeam et
                     LEFT JOIN et.event e
-                    WHERE e.name = :typeNumber and e.datetime > :now
+                    WHERE e.name = :typeNumber and (e.datetime >= :now or e.datetime <= :now)
                     ORDER BY t.positionM ASC
                 ';
             }break;

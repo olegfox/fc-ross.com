@@ -19,7 +19,7 @@
                         {% if app.request.get('subtype') != 'turnirnaia-tablitsa' %}
                         <a href="{{ path('frontend_event_sub_index', {type: app.request.get('type'), subtype: 'turnirnaia-tablitsa'}) }}">
                             {% endif %}
-                            Турнирная таблица
+                            Standings
                             {% if app.request.get('subtype') != 'turnirnaia-tablitsa' %}
                         </a>
                         {% endif %}
@@ -28,7 +28,7 @@
                         {% if app.request.get('subtype') != 'kaliendar-ighr' %}
                             <a href="{{ path('frontend_event_sub_index', {type: app.request.get('type'), subtype: 'kaliendar-ighr'}) }}">
                         {% endif %}
-                            Календарь игр
+                            Games calendar
                         {% if app.request.get('subtype') != 'kaliendar-ighr' %}
                             </a>
                         {% endif %}
@@ -38,7 +38,7 @@
                         {% if app.request.get('subtype') != 'riezul-taty-matchiei' %}
                             <a href="{{ path('frontend_event_sub_index', {type: app.request.get('type'), subtype: 'riezul-taty-matchiei'}) }}">
                         {% endif %}
-                            Результаты матчей
+                            Match results
                         {% if app.request.get('subtype') != 'riezul-taty-matchiei' %}
                             </a>
                         {% endif %}
@@ -48,7 +48,7 @@
                         {% if app.request.get('subtype') != 'novosti' %}
                         <a href="{{ path('frontend_event_sub_index', {type: app.request.get('type'), subtype: 'novosti'}) }}">
                             {% endif %}
-                            Новости
+                            News
                             {% if app.request.get('subtype') != 'novosti' %}
                         </a>
                         {% endif %}

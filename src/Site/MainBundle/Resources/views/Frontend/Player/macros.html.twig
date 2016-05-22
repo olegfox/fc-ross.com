@@ -2,12 +2,12 @@
     {% if players|length > 0 %}
         <table class="table-players">
             <thead>
-                <th>Игрок</th>
-                <th>{{ 'backend.player.amplua'|trans({}, 'menu') }}</th>
-                <th>{{ 'backend.player.nationality'|trans({}, 'menu') }}</th>
-                <th>{{ 'backend.player.birthday'|trans({}, 'menu') }}</th>
-                <th>{{ 'backend.player.height'|trans({}, 'menu') }}</th>
-                <th>{{ 'backend.player.weight'|trans({}, 'menu') }}</th>
+                <th>Player</th>
+                <th>{{ 'frontend.player.amplua'|trans({}, 'menu') }}</th>
+                <th>{{ 'frontend.player.nationality'|trans({}, 'menu') }}</th>
+                <th>{{ 'frontend.player.birthday'|trans({}, 'menu') }}</th>
+                <th>{{ 'frontend.player.height'|trans({}, 'menu') }}</th>
+                <th>{{ 'frontend.player.weight'|trans({}, 'menu') }}</th>
             </thead>
             <tbody>
                 {% for p in players %}
@@ -50,87 +50,87 @@
             <td>
                 <table class="table-player">
                     <tr>
-                        <th>{{ 'backend.player.firstname'|trans({}, 'menu') }}</th>
+                        <th>{{ 'frontend.player.firstname'|trans({}, 'menu') }}</th>
                         <td>{{ player.firstname }}</td>
                     </tr>
                     <tr>
-                        <th>{{ 'backend.player.secondname'|trans({}, 'menu') }}</th>
+                        <th>{{ 'frontend.player.secondname'|trans({}, 'menu') }}</th>
                         <td>{{ player.secondname }}</td>
                     </tr>
                     <tr>
-                        <th>{{ 'backend.player.patronymic'|trans({}, 'menu') }}</th>
+                        <th>{{ 'frontend.player.patronymic'|trans({}, 'menu') }}</th>
                         <td>{{ player.patronymic }}</td>
                     </tr>
                     <tr>
-                        <th>{{ 'backend.player.birthday'|trans({}, 'menu') }}</th>
+                        <th>{{ 'frontend.player.birthday'|trans({}, 'menu') }}</th>
                         <td>{{ player.birthday|date('d.m.Y') }}</td>
                     </tr>
                     <tr>
-                        <th>{{ 'backend.player.birth_place'|trans({}, 'menu') }}</th>
+                        <th>{{ 'frontend.player.birth_place'|trans({}, 'menu') }}</th>
                         <td>{{ player.birthPlace }}</td>
                     </tr>
                     <tr>
-                        <th>{{ 'backend.player.nationality'|trans({}, 'menu') }}</th>
+                        <th>{{ 'frontend.player.nationality'|trans({}, 'menu') }}</th>
                         <td>{{ player.nationality }}</td>
                     </tr>
                     <tr>
-                        <th>{{ 'backend.player.amplua'|trans({}, 'menu') }}</th>
+                        <th>{{ 'frontend.player.amplua'|trans({}, 'menu') }}</th>
                         <td>{{ player.amplua.name }}</td>
                     </tr>
                     <tr>
-                        <th>{{ 'backend.player.height'|trans({}, 'menu') }}</th>
+                        <th>{{ 'frontend.player.height'|trans({}, 'menu') }}</th>
                         <td>{{ player.height }}</td>
                     </tr>
                     <tr>
-                        <th>{{ 'backend.player.weight'|trans({}, 'menu') }}</th>
+                        <th>{{ 'frontend.player.weight'|trans({}, 'menu') }}</th>
                         <td>{{ player.weight }}</td>
                     </tr>
                     <tr>
-                        <th>{{ 'backend.player.firstCoach'|trans({}, 'menu') }}</th>
+                        <th>{{ 'frontend.player.firstCoach'|trans({}, 'menu') }}</th>
                         <td>{{ player.firstCoach }}</td>
                     </tr>
                     <tr>
-                        <th>{{ 'backend.player.progress'|trans({}, 'menu') }}</th>
+                        <th>{{ 'frontend.player.progress'|trans({}, 'menu') }}</th>
                         <td>{{ player.progress }}</td>
                     </tr>
                     <tr>
-                        <th>{{ 'backend.player.title'|trans({}, 'menu') }}</th>
+                        <th>{{ 'frontend.player.title'|trans({}, 'menu') }}</th>
                         <td>{{ player.title }}</td>
                     </tr>
                     <tr>
-                        <th>{{ 'backend.player.previous_teams'|trans({}, 'menu') }}</th>
+                        <th>{{ 'frontend.player.previous_teams'|trans({}, 'menu') }}</th>
                         <td>{{ player.previousTeams }}</td>
                     </tr>
                     <tr>
-                        <th>{{ 'backend.player.favorite_place'|trans({}, 'menu') }}</th>
+                        <th>{{ 'frontend.player.favorite_place'|trans({}, 'menu') }}</th>
                         <td>{{ player.favoritePlace }}</td>
                     </tr>
                     <tr>
-                        <th>{{ 'backend.player.favorite_dish'|trans({}, 'menu') }}</th>
+                        <th>{{ 'frontend.player.favorite_dish'|trans({}, 'menu') }}</th>
                         <td>{{ player.favoriteDish }}</td>
                     </tr>
                     <tr>
-                        <th>{{ 'backend.player.favorite_music'|trans({}, 'menu') }}</th>
+                        <th>{{ 'frontend.player.favorite_music'|trans({}, 'menu') }}</th>
                         <td>{{ player.favoriteMusic }}</td>
                     </tr>
                     <tr>
-                        <th>{{ 'backend.player.favorite_book'|trans({}, 'menu') }}</th>
+                        <th>{{ 'frontend.player.favorite_book'|trans({}, 'menu') }}</th>
                         <td>{{ player.favoriteBook }}</td>
                     </tr>
                     <tr>
-                        <th>{{ 'backend.player.any_sport'|trans({}, 'menu') }}</th>
+                        <th>{{ 'frontend.player.any_sport'|trans({}, 'menu') }}</th>
                         <td>{{ player.anySport }}</td>
                     </tr>
                     <tr>
-                        <th>{{ 'backend.player.hobby'|trans({}, 'menu') }}</th>
+                        <th>{{ 'frontend.player.hobby'|trans({}, 'menu') }}</th>
                         <td>{{ player.hobby }}</td>
                     </tr>
                     <tr>
-                        <th>{{ 'backend.player.favorite_phrase'|trans({}, 'menu') }}</th>
+                        <th>{{ 'frontend.player.favorite_phrase'|trans({}, 'menu') }}</th>
                         <td>{{ player.favoritePhrase }}</td>
                     </tr>
                     <tr>
-                        <th class="last">{{ 'backend.player.status'|trans({}, 'menu') }}</th>
+                        <th class="last">{{ 'frontend.player.status'|trans({}, 'menu') }}</th>
                         <td>{{ player.getStatusText()|trans({}, 'menu') }}</td>
                     </tr>
                 </table>

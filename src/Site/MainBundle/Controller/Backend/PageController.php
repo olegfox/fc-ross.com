@@ -23,7 +23,7 @@ class PageController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('SiteMainBundle:Page')->findAll();
+        $entities = $em->getRepository('SiteMainBundle:Page')->findBy(array(), array('position' => 'ASC'));
 
         $paginator = $this->get('knp_paginator');
         $pagination = $paginator->paginate(

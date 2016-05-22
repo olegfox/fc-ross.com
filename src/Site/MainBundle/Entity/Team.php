@@ -121,7 +121,7 @@ class Team
     private $positionM = 0;
 
     /**
-     * @Gedmo\Slug(fields={"name"})
+     * @Gedmo\Slug(fields={"name"}, updatable=true, separator="-")
      * @ORM\Column(length=128)
      */
     private $slug;

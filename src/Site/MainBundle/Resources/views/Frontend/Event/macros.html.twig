@@ -3,12 +3,12 @@
         <table class="table-event">
             <thead>
             <th></th>
-            <th>Игры</th>
-            <th>Победы</th>
-            <th>Ничьи</th>
-            <th>Пораж.</th>
-            <th>Мячи</th>
-            <th>Очки</th>
+            <th>Games</th>
+            <th>Victory</th>
+            <th>Draws</th>
+            <th>Lesions</th>
+            <th>Balls</th>
+            <th>Spectacles</th>
             </thead>
             <tbody>
             {% for team in teams %}
@@ -73,12 +73,12 @@
         <table class="table-event">
             <thead>
                 <th>{% if type == 'kubok' %}Этап{% else %}Тур{% endif %}</th>
-                <th>Дата, время</th>
+                <th>Date, Time</th>
                 <th></th>
-                <th>Команды</th>
+                <th>Commands</th>
                 <th></th>
-                <th>Счёт</th>
-                <th>Стадион</th>
+                <th>Score</th>
+                <th>Stadium</th>
             </thead>
             <tbody>
             {% for event in events %}
@@ -157,7 +157,7 @@
 
 {% macro calendarCircle(calendar) %}
     {% if calendar|length > 0 %}
-        <div class="right-block-title">календарь предстоящих событий</div>
+        <div class="right-block-title">calendar of upcoming events</div>
         <div id="daily-events-calendar">
             {% for c in calendar %}
                 <div class="day day{{ loop.index }}{% if c['events'] is defined %}{% if c['events']|length > 0 %} active{% endif %}{% if c['events']['birthDay'] is defined %} active2{% endif %}{% if c['events']['double'] is defined %} active3{% endif %}{% endif %}">

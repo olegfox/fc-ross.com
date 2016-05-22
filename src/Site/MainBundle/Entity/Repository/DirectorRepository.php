@@ -19,7 +19,7 @@ class DirectorRepository extends EntityRepository
 
         $array = array(
             0 => array(
-                'name' => 'Руководство',
+                'name' => 'Management team',
                 'directors' => array()
             ),
             1 => array(

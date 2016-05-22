@@ -9,39 +9,39 @@
         <div class="content content-top content-top-event">
             <div class="event-table game-table">
                 <ul class="menu">
-                    <li {% if app.request.get('subtype') == 'russian-championship' %}class="current"{% endif %}>
-                        {% if app.request.get('subtype') != 'russian-championship' %}
-                        <a href="{{ path('frontend_event_sub_index', {type: app.request.get('type'), subtype: 'russian-championship'}) }}">
+                    <li {% if app.request.get('subtype') == 'standings' %}class="current"{% endif %}>
+                        {% if app.request.get('subtype') != 'standings' %}
+                        <a href="{{ path('frontend_event_sub_index', {type: app.request.get('type'), subtype: 'standings'}) }}">
                             {% endif %}
                             Standings
-                            {% if app.request.get('subtype') != 'russian-championship' %}
+                            {% if app.request.get('subtype') != 'standings' %}
                         </a>
                         {% endif %}
                     </li>
-                    <li {% if app.request.get('subtype') == 'kaliendar-ighr' %}class="current"{% endif %}>
-                        {% if app.request.get('subtype') != 'kaliendar-ighr' %}
-                        <a href="{{ path('frontend_event_sub_index', {type: app.request.get('type'), subtype: 'kaliendar-ighr'}) }}">
+                    <li {% if app.request.get('subtype') == 'fixtures' %}class="current"{% endif %}>
+                        {% if app.request.get('subtype') != 'fixtures' %}
+                        <a href="{{ path('frontend_event_sub_index', {type: app.request.get('type'), subtype: 'fixtures'}) }}">
                             {% endif %}
                             Games calendar
-                            {% if app.request.get('subtype') != 'kaliendar-ighr' %}
+                            {% if app.request.get('subtype') != 'fixtures' %}
                         </a>
                         {% endif %}
                     </li>
-                    <li {% if app.request.get('subtype') == 'riezul-taty-matchiei' %}class="current"{% endif %}>
-                        {% if app.request.get('subtype') != 'riezul-taty-matchiei' %}
-                        <a href="{{ path('frontend_event_sub_index', {type: app.request.get('type'), subtype: 'riezul-taty-matchiei'}) }}">
+                    <li {% if app.request.get('subtype') == 'results' %}class="current"{% endif %}>
+                        {% if app.request.get('subtype') != 'results' %}
+                        <a href="{{ path('frontend_event_sub_index', {type: app.request.get('type'), subtype: 'results'}) }}">
                             {% endif %}
                             Match results
-                            {% if app.request.get('subtype') != 'riezul-taty-matchiei' %}
+                            {% if app.request.get('subtype') != 'results' %}
                         </a>
                         {% endif %}
                     </li>
-                    <li {% if app.request.get('subtype') == 'novosti' %}class="current"{% endif %}>
-                        {% if app.request.get('subtype') != 'novosti' %}
-                        <a href="{{ path('frontend_event_sub_index', {type: app.request.get('type'), subtype: 'novosti'}) }}">
+                    <li {% if app.request.get('subtype') == 'news' %}class="current"{% endif %}>
+                        {% if app.request.get('subtype') != 'news' %}
+                        <a href="{{ path('frontend_event_sub_index', {type: app.request.get('type'), subtype: 'news'}) }}">
                             {% endif %}
                             News
-                            {% if app.request.get('subtype') != 'novosti' %}
+                            {% if app.request.get('subtype') != 'news' %}
                         </a>
                         {% endif %}
                     </li>

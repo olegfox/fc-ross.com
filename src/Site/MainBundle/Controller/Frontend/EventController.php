@@ -10,7 +10,7 @@ class EventController extends Controller
     {
         $repository_page = $this->getDoctrine()->getRepository('SiteMainBundle:Page');
 
-        $page = $repository_page->findOneBySlug('turniry');
+        $page = $repository_page->findOneBySlug('competitions');
 
         if(!$page){
             throw $this->createNotFoundException($this->get('translator')->trans('backend.page.not_found'));

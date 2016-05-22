@@ -23,19 +23,19 @@ class FrontendMenuBuilder extends ContainerAware
 
         foreach ($menus as $m) {
 
-            if ($m->getSlug() == 'glavnaia') {
+            if ($m->getSlug() == 'main') {
 
 //                $menu->addChild($m->getTitle(), array(
 //                    'route' => 'frontend_homepage'
 //                ));
 
 //          Меню Медиа
-            } elseif ($m->getSlug() == 'miedia') {
+            } elseif ($m->getSlug() == 'media') {
                 $menu->addChild($m->getTitle(), array(
                     'route' => 'frontend_media_index'
                 ));
 //          Меню новостей
-            } elseif ($m->getSlug() == 'novosti') {
+            } elseif ($m->getSlug() == 'news') {
 
                 $newsMenu = $menu->addChild($m->getTitle(), array(
                     'route' => 'frontend_news_index',
@@ -44,15 +44,15 @@ class FrontendMenuBuilder extends ContainerAware
                 ));
 
 //              Подменю
-                $newsMenu->addChild('события', array(
+                $newsMenu->addChild('events', array(
                     'route' => 'frontend_news_index',
                     'routeParameters' => array('type' => 'events')
                 ));
-                $newsMenu->addChild('интервью', array(
+                $newsMenu->addChild('interview', array(
                     'route' => 'frontend_news_index',
                     'routeParameters' => array('type' => 'interviews')
                 ));
-                $newsMenu->addChild('мнения', array(
+                $newsMenu->addChild('opinions', array(
                     'route' => 'frontend_news_index',
                     'routeParameters' => array('type' => 'opinion')
                 ));
@@ -62,7 +62,7 @@ class FrontendMenuBuilder extends ContainerAware
 //              Если это турниры, то сразу попадаем на чемпионаты
                 $eventMenu = $menu->addChild($m->getTitle(), array(
                     'route' => 'frontend_event_sub_index',
-                    'routeParameters' => array('type' => $m->getChildren()[0]->getSlug(), 'subtype' => 'turnirnaia-tablitsa'),
+                    'routeParameters' => array('type' => $m->getChildren()[0]->getSlug(), 'subtype' => 'standings'),
                     'attributes' => array('class' => 'children')
                 ));
 
@@ -71,7 +71,7 @@ class FrontendMenuBuilder extends ContainerAware
                     if (!$c->getHide()) {
                         $subEventMenu = $eventMenu->addChild($c->getTitle(), array(
                             'route' => 'frontend_event_sub_index',
-                            'routeParameters' => array('type' => $c->getSlug(), 'subtype' => 'turnirnaia-tablitsa')
+                            'routeParameters' => array('type' => $c->getSlug(), 'subtype' => 'standings')
                         ));
                         if(($routeName == 'frontend_event_sub_index' && $request->get('type') == $c->getSlug()) ||
                            ($routeName == 'frontend_event_game_index' && $request->get('type') == $c->getSlug())){
@@ -87,7 +87,7 @@ class FrontendMenuBuilder extends ContainerAware
                     'routeParameters' => array('slug' => $m->getSlug())
                 ));
 
-                if($m->getSlug() == 'komanda' || $m->getSlug() == 'o-klubie'){
+                if($m->getSlug() == 'team' || $m->getSlug() == 'club'){
                     if(is_object($m->getChildren()[0])){
                         $mainMenu = $menu->addChild($m->getTitle(), array(
                             'route' => 'frontend_page_child',
